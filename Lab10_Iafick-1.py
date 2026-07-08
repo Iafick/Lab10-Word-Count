@@ -96,18 +96,18 @@ def main():
 
     # Dictionary containing files
     files = {
-        "1": Path("moby_dick_ch1.txt"),
-        "2": Path("frankenstein_ch1.txt"),
-        "3": Path("alice_ch1.txt"),
-        "4": Path("pride_prejudice_ch1.txt")
+        "1": Path("Tarzan.txt"),
+        "2": Path("monte_cristo.txt"),
+        "3": Path("princess_mars.txt"),
+        "4": Path("treasure_island.txt")
     }
 
 
     names = {
-        "1": "Moby Dick (Chapter 1)",
-        "2": "Frankenstein (Chapter 1)",
-        "3": "Alice in Wonderland (Chapter 1)",
-        "4": "Pride and Prejudice (Chapter 1)"
+        "1": "Tarzan (Chapter 1)",
+        "2": "The Count of Monte Cristo (Chapter 1)",
+        "3": "APrincess Mars (Chapter 1)",
+        "4": "Treasure Island (Chapter 1)"
     }
 
 
