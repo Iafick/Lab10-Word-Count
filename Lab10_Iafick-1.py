@@ -109,15 +109,12 @@ def main():
 
         print("5. Exit")
 
-
         choice = input("\nEnter your choice (1-5): ")
-
 
 
         if choice == "5":
             print("\nGoodbye!")
             break
-
 
 
         elif choice in files:
@@ -132,22 +129,17 @@ def main():
 
 
             success = analyzer.process_file()
-
-
             if success:
                 analyzer.print_report()
 
 
             input("\nPress Enter to return to the menu...")
 
-
-
         else:
 
             print("\nInvalid choice. Please select from 1-5.")
 
             input("\nPress Enter to return to the menu...")
-
 
 
 if __name__ == "__main__":
