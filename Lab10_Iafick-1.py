@@ -6,7 +6,7 @@ Purpose:This program demonstrates Object-Oriented Programming by creating a
         and displays an alphabetical report.
 Starter Code: None
 Date:
-July 7, 2026
+July 6, 2026
 """
 
 from pathlib import Path
@@ -26,51 +26,39 @@ class WordAnalyzer:
 
 
     def process_file(self):
-        
-       # this Reads file and counts words.
-       #Returns True if successful, False otherwise.
-        
-
+        """
+        Reads file and counts words.  
+        Returns True if successful, False otherwise.
+        """
         try:
-
             # Check if file exists
             if not self.__filepath.exists():
                 raise FileNotFoundError
 
-
             # Create translation table to remove punctuation
             translator = str.maketrans("", "", string.punctuation)
 
-
             # Open and read file line by line
             with self.__filepath.open("r", encoding="utf-8") as file:
-
                 for line in file:
-
                     # Remove punctuation
                     line = line.translate(translator)
-
                     # Convert lowercase
                     line = line.lower()
-
                     # Split into words
                     words = line.split()
 
-
-                    # Count words
+                    # Counts words
                     for word in words:
 
-                        if word in self.__frequencies:
-                            self.__frequencies[word] += 1
-                        else:
-                            self.__frequencies[word] = 1
-
+                     if word in self.__frequencies:
+                        self.__frequencies[word] += 1
+                     else:
+                        self.__frequencies[word] = 1
 
             return True
 
-
         except FileNotFoundError:
-
             print("Error: File not found.")
             return False
 
@@ -106,10 +94,9 @@ def main():
     names = {
         "1": "Tarzan (Chapter 1)",
         "2": "The Count of Monte Cristo (Chapter 1)",
-        "3": "APrincess Mars (Chapter 1)",
+        "3": "A Princess Mars (Chapter 1)",
         "4": "Treasure Island (Chapter 1)"
     }
-
 
 
     while True:
